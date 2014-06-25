@@ -1,0 +1,32 @@
+name: Red Route
+type: theme
+description: 'Custom theme for Red Route'
+package: Red Route
+version: 1.0
+core: 8.x
+
+stylesheets:
+  all:
+    - css/redroute.css
+
+regions:
+  header: Header
+  help: Help
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  highlighted: Highlighted
+  featured: Featured
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  triptych_first: 'Triptych first'
+  triptych_middle: 'Triptych middle'
+  triptych_last: 'Triptych last'
+  footer_firstcolumn: 'Footer first column'
+  footer_secondcolumn: 'Footer second column'
+  footer_thirdcolumn: 'Footer third column'
+  footer_fourthcolumn: 'Footer fourth column'
+  footer: Footer
+
+settings:
+  shortcut_module_link: false

@@ -1,0 +1,8 @@
+# ignore compiled CSS files
+css/**
+
+# ignore the sass cache directory
+.sass-cache/**
+
+# ignore generated sprite files
+images/icons-*
