@@ -93,6 +93,9 @@ $font-monospace:   $courier;
 //
 // Colors, etc.
 //
+$black: #000;
+$white: #FFF;
+$red: #FC0D1B;
 
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 30px;
@@ -120,7 +123,7 @@ $tabs-border: #bbb;
 // Helps set up a vertical rhythm.
 @import "compass/typography/vertical_rhythm";
 // Add the Zen Grids responsive layout mixins.
-@import "zen";
+// @import "zen";
 
 // Now we add our custom helper mixins.
 @import "mixins";
