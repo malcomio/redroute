@@ -2,13 +2,25 @@ body {
   background: $black;
 }
 
+.header {
+
+}
+
+.logo {
+  display: block;
+  margin: 1em;
+}
+
 .page-wrapper {
   margin: 1em auto;
-  padding: 1em;
-  background: url(../images/cork.jpg);
   border: 2px solid $red;
   @include border-radius(10px);
   width: 90%;
+}
+
+.main-wrapper {
+  background: url(../images/cork.jpg);
+  padding: 1em;
 }
 
 .content-main {
@@ -18,7 +30,6 @@ body {
 
 .navigation {
   @extend %clearfix;
-  margin: 0 -1em;
   padding: 0.5em;
   background: url(../images/metal.jpg);
   border-top: 2px solid $red;

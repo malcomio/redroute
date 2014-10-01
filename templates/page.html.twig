@@ -79,50 +79,12 @@
 #}
 <div class="page-wrapper">
   <div id="page">
-    <header id="header" class="{{ secondary_menu ? 'with-secondary-menu' : 'without-secondary-menu' }}" role="banner" aria-label="{{ 'Site header'|t }}">
+    <header class="header {{ secondary_menu ? 'with-secondary-menu' : 'without-secondary-menu' }}" role="banner" aria-label="{{ 'Site header'|t }}">
       <div class="section clearfix">
-        {% if secondary_menu %}
-          <nav id="secondary-menu" class="navigation" role="navigation"
-               aria-labelledby="links__system_secondary_menu">
-            {{ secondary_menu }}
-          </nav> <!-- /#secondary-menu -->
-        {% endif %}
-
         {% if logo %}
-          <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home"
-             id="logo">
+          <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" class="logo">
             <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
           </a>
-        {% endif %}
-
-        {% if site_name or site_slogan %}
-          <div
-              id="name-and-slogan"{% if hide_site_name and hide_site_slogan %} class="visually-hidden"{% endif %}>
-            {% if site_name %}
-              {% if title %}
-                <div
-                    id="site-name"{% if hide_site_name %} class="visually-hidden"{% endif %}>
-                  <strong>
-                    <a href="{{ front_page }}" title="{{ 'Home'|t }}"
-                       rel="home"><span>{{ site_name }}</span></a>
-                  </strong>
-                </div>
-                {# Use h1 when the content title is empty #}
-              {% else %}
-                <h1 id="site-name"{% if hide_site_name %} class="visually-hidden" {% endif %}>
-                  <a href="{{ front_page }}" title="{{ 'Home'|t }}"
-                     rel="home"><span>{{ site_name }}</span></a>
-                </h1>
-              {% endif %}
-            {% endif %}
-
-            {% if site_slogan %}
-              <div
-                  id="site-slogan"{% if hide_site_slogan %} class="visually-hidden"{% endif %}>
-                {{ site_slogan }}
-              </div>
-            {% endif %}
-          </div><!-- /#name-and-slogan -->
         {% endif %}
 
         {{ page.header }}
@@ -158,11 +120,9 @@
       </aside> <!-- /.section, /#featured -->
     {% endif %}
 
-    <div id="main-wrapper" class="clearfix">
-      <div id="main" class="clearfix">
+    <div class="main-wrapper">
         {{ breadcrumb }}
-
-        <main id="content" class="column" role="main">
+        <main class="content-main" class="column" role="main">
           <section class="section">
             {% if page.highlighted %}
               <div id="highlighted">{{ page.highlighted }}</div>{% endif %}
@@ -206,10 +166,7 @@
             </aside>
           </div><!-- /.section, /#sidebar-second -->
         {% endif %}
-
-      </div>
     </div>
-    <!-- /#main, /#main-wrapper -->
 
     {% if page.triptych_first or page.triptych_middle or page.triptych_last %}
       <div id="triptych-wrapper">
