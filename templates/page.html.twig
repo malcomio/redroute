@@ -178,27 +178,29 @@
       </div><!-- /#triptych, /#triptych-wrapper -->
     {% endif %}
 
-    <div id="footer-wrapper">
-      <footer class="section">
 
-        {% if page.footer_firstcolumn or page.footer_secondcolumn or page.footer_thirdcolumn or page.footer_fourthcolumn %}
-          <div id="footer-columns" class="clearfix">
-            {{ page.footer_firstcolumn }}
-            {{ page.footer_secondcolumn }}
-            {{ page.footer_thirdcolumn }}
-            {{ page.footer_fourthcolumn }}
-          </div><!-- /#footer-columns -->
-        {% endif %}
-
-        {% if page.footer %}
-          <div id="footer" role="contentinfo" class="clearfix">
-            {{ page.footer }}
-          </div> <!-- /#footer -->
-        {% endif %}
-
-      </footer>
-    </div>
     <!-- /.section, /#footer-wrapper -->
 
   </div>
+
 </div> <!-- /#page, /#page-wrapper -->
+<div id="footer-wrapper">
+  <footer class="section">
+
+    {% if page.footer_firstcolumn or page.footer_secondcolumn or page.footer_thirdcolumn or page.footer_fourthcolumn %}
+      <div id="footer-columns" class="clearfix">
+        {{ page.footer_firstcolumn }}
+        {{ page.footer_secondcolumn }}
+        {{ page.footer_thirdcolumn }}
+        {{ page.footer_fourthcolumn }}
+      </div><!-- /#footer-columns -->
+    {% endif %}
+
+    {% if page.footer %}
+      <div id="footer" role="contentinfo" class="clearfix">
+        {{ page.footer }}
+      </div> <!-- /#footer -->
+    {% endif %}
+
+  </footer>
+</div>
