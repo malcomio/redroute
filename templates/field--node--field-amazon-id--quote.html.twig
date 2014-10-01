@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a field.
+ *
+ * To override output, copy the "field.html.twig" from the templates directory
+ * to your theme's directory and customize it, just like customizing other
+ * Drupal templates such as page.html.twig or node.html.twig.
+ *
+ * For example, for a field named 'body' displayed on the 'article' content
+ * type, any of the following templates will override this default
+ * implementation. The first of these templates that exists is used:
+ * - field--body--article.html.twig
+ * - field--article.html.twig
+ * - field--body.html.twig
+ * - field.html.twig
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing element.
+ * - label_hidden: Whether to show the field label or not.
+ * - title_attributes: HTML attributes for the title.
+ * - label: The label for the field.
+ * - content_attributes: HTML attributes for the content.
+ * - items: List of all the field items.
+ * - item_attributes: List of HTML attributes for each item.
+ *
+ * @see template_preprocess_field()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% for delta, item in items %}
+  <a {{ attributes }} href="http://www.amazon.co.uk/gp/product/{{ item }}/ref=as_li_tf_il?ie=UTF8&amp;camp=1634&amp;creative=6738&amp;creativeASIN=1566633176&amp;linkCode=as2&amp;tag=rubytechn-21" target="_blank">
+    <img border="0" src="http://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN={{ item }}&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=GB&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=rubytechn-21">
+  </a>
+{% endfor %}
