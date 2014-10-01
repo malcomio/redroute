@@ -26,6 +26,12 @@
  * @ingroup themeable
  */
 #}
+
+{%
+set classes = [
+  'social'
+]
+%}
 {% if tree -%}
   {%- if heading -%}
     {%- if heading.level -%}
@@ -34,7 +40,7 @@
       <h2{{ heading.attributes }}>{{ heading.text }}</h2>
     {%- endif -%}
   {%- endif -%}
-  <ul{{ attributes }}>
+  <ul{{ attributes.addClass(classes) }}>
     {{ tree }}
   </ul>
 {%- endif %}

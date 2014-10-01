@@ -24,13 +24,3 @@ function redroute_preprocess_maintenance_page(&$variables) {
   );
   drupal_render($libraries);
 }
-
-/**
- * Implements template_preprocess_menu_tree().
- */
-function redroute_preprocess_menu_tree(&$variables) {
-  // Add a menu class.
-  if ($variables['theme_hook_original'] == 'menu_tree__social') {
-    $variables['attributes']['class'][] = 'social';
-  }
-}
