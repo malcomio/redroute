@@ -1,0 +1,36 @@
+<?php
+
+
+
+/**
+ * Implements hook_preprocess_HOOK() for maintenance-page.html.twig.
+ */
+function redroute_preprocess_maintenance_page(&$variables) {
+  // By default, site_name is set to Drupal if no db connection is available
+  // or during site installation. Setting site_name to an empty string makes
+  // the site and update pages look cleaner.
+  // @see template_preprocess_maintenance_page
+  if (!$variables['db_is_active']) {
+    $variables['site_name'] = 'Red Route';
+  }
+  // Normally we could attach libraries via hook_page_alter(), but when the
+  // database is inactive it's not called so we add them here.
+  $libraries = array(
+    '#attached' => array(
+      'library' => array(
+        'redroute/maintenance_page',
+      ),
+    ),
+  );
+  drupal_render($libraries);
+}
+
+/**
+ * Implements template_preprocess_menu_tree().
+ */
+function redroute_preprocess_menu_tree(&$variables) {
+  // Add a menu class.
+  if ($variables['theme_hook_original'] == 'menu_tree__social') {
+    $variables['attributes']['class'][] = 'social';
+  }
+}
