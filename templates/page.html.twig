@@ -89,17 +89,9 @@
 
         {{ page.header }}
 
-        {% if main_menu %}
-          <nav id="main-menu" class="navigation" role="navigation"
-               aria-labelledby="links__system_main_menu">
-            <div id="nav"></div>
-            <div id="no-nav"></div>
-            <a class="main-menu-reveal" href="#nav">{{ 'Menu'|t }}</a>
-            <a class="main-menu-reveal main-menu-reveal--hide"
-               href="#no-nav">{{ 'Menu'|t }}</a>
-            {{ main_menu }}
-          </nav> <!-- /#main-menu -->
-        {% endif %}
+        <div class="navigation">
+          {{ page.navigation }}
+        </div>
       </div>
     </header>
     <!-- /.section, /#header-->
