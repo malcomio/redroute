@@ -80,7 +80,6 @@
 <div class="page-wrapper">
   <div id="page">
     <header class="header {{ secondary_menu ? 'with-secondary-menu' : 'without-secondary-menu' }}" role="banner" aria-label="{{ 'Site header'|t }}">
-      <div class="section clearfix">
         {% if logo %}
           <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" class="logo">
             <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
@@ -89,10 +88,10 @@
 
         {{ page.header }}
 
-        {{ page.navigation }}
-      </div>
     </header>
     <!-- /.section, /#header-->
+
+    {{ page.navigation }}
 
     {% if messages %}
       <div id="messages">
@@ -149,25 +148,7 @@
           </div><!-- /.section, /#sidebar-first -->
         {% endif %}
 
-        {% if page.sidebar_second %}
-          <div id="sidebar-second" class="column sidebar">
-            <aside class="section">
-              {{ page.sidebar_second }}
-            </aside>
-          </div><!-- /.section, /#sidebar-second -->
-        {% endif %}
     </div>
-
-    {% if page.triptych_first or page.triptych_middle or page.triptych_last %}
-      <div id="triptych-wrapper">
-        <aside id="triptych" class="clearfix">
-          {{ page.triptych_first }}
-          {{ page.triptych_middle }}
-          {{ page.triptych_last }}
-        </aside>
-      </div><!-- /#triptych, /#triptych-wrapper -->
-    {% endif %}
-
 
     <!-- /.section, /#footer-wrapper -->
 

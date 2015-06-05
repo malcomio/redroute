@@ -3,12 +3,17 @@ body {
 }
 
 .header {
-
+  @extend %clearfix;
 }
 
 .logo {
   display: block;
+  float: left;
   margin: 1em;
+}
+
+.region-header {
+  float: left;
 }
 
 .page-wrapper {
