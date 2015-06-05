@@ -5,9 +5,8 @@ package: Red Route
 version: 1.0
 core: 8.x
 
-stylesheets:
-  all:
-    - css/redroute.css
+libraries:
+  - redroute/global-css
 
 regions:
   header: Header
