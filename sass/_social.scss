@@ -5,5 +5,7 @@
 
   .menu-item {
     @extend %hide-text;
+    display: inline-block;
+    margin-right: 1em;
   }
 }

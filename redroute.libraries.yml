@@ -2,3 +2,4 @@ global-css:
   css:
     theme:
       css/redroute.css: {}
+      css/sprites.css: {}
