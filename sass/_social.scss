@@ -1,0 +1,9 @@
+.menu--social {
+  .block-title {
+    @extend %element-invisible;
+  }
+
+  .menu-item {
+    @extend %hide-text;
+  }
+}

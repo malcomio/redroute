@@ -5,6 +5,8 @@ package: Red Route
 version: 1.0
 core: 8.x
 
+base theme: classy
+
 libraries:
   - redroute/global-css
 

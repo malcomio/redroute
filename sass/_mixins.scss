@@ -59,6 +59,21 @@
 }
 
 /**
+ * Hide text
+ */
+@mixin hide-text {
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.hide-text,
+%hide-text {
+  @include hide-text;
+}
+
+
+/**
  * Float clearing.
  *
  * Based on the micro clearfix hack by Nicolas Gallagher, with the :before
