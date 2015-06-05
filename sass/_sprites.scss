@@ -1,0 +1,169 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$delicious-name: 'delicious';
+$delicious-x: 0px;
+$delicious-y: 0px;
+$delicious-offset-x: 0px;
+$delicious-offset-y: 0px;
+$delicious-width: 32px;
+$delicious-height: 32px;
+$delicious-total-width: 96px;
+$delicious-total-height: 96px;
+$delicious-image: '../images/spritesheet.png';
+$delicious: (0px, 0px, 0px, 0px, 32px, 32px, 96px, 96px, '../images/spritesheet.png', 'delicious');
+$drupal-name: 'drupal';
+$drupal-x: 32px;
+$drupal-y: 0px;
+$drupal-offset-x: -32px;
+$drupal-offset-y: 0px;
+$drupal-width: 32px;
+$drupal-height: 32px;
+$drupal-total-width: 96px;
+$drupal-total-height: 96px;
+$drupal-image: '../images/spritesheet.png';
+$drupal: (32px, 0px, -32px, 0px, 32px, 32px, 96px, 96px, '../images/spritesheet.png', 'drupal');
+$flickr-name: 'flickr';
+$flickr-x: 0px;
+$flickr-y: 32px;
+$flickr-offset-x: 0px;
+$flickr-offset-y: -32px;
+$flickr-width: 32px;
+$flickr-height: 32px;
+$flickr-total-width: 96px;
+$flickr-total-height: 96px;
+$flickr-image: '../images/spritesheet.png';
+$flickr: (0px, 32px, 0px, -32px, 32px, 32px, 96px, 96px, '../images/spritesheet.png', 'flickr');
+$github-name: 'github';
+$github-x: 32px;
+$github-y: 32px;
+$github-offset-x: -32px;
+$github-offset-y: -32px;
+$github-width: 32px;
+$github-height: 32px;
+$github-total-width: 96px;
+$github-total-height: 96px;
+$github-image: '../images/spritesheet.png';
+$github: (32px, 32px, -32px, -32px, 32px, 32px, 96px, 96px, '../images/spritesheet.png', 'github');
+$google-plus-name: 'google-plus';
+$google-plus-x: 64px;
+$google-plus-y: 0px;
+$google-plus-offset-x: -64px;
+$google-plus-offset-y: 0px;
+$google-plus-width: 32px;
+$google-plus-height: 32px;
+$google-plus-total-width: 96px;
+$google-plus-total-height: 96px;
+$google-plus-image: '../images/spritesheet.png';
+$google-plus: (64px, 0px, -64px, 0px, 32px, 32px, 96px, 96px, '../images/spritesheet.png', 'google-plus');
+$lastfm-name: 'lastfm';
+$lastfm-x: 64px;
+$lastfm-y: 32px;
+$lastfm-offset-x: -64px;
+$lastfm-offset-y: -32px;
+$lastfm-width: 32px;
+$lastfm-height: 32px;
+$lastfm-total-width: 96px;
+$lastfm-total-height: 96px;
+$lastfm-image: '../images/spritesheet.png';
+$lastfm: (64px, 32px, -64px, -32px, 32px, 32px, 96px, 96px, '../images/spritesheet.png', 'lastfm');
+$linkedin-name: 'linkedin';
+$linkedin-x: 0px;
+$linkedin-y: 64px;
+$linkedin-offset-x: 0px;
+$linkedin-offset-y: -64px;
+$linkedin-width: 32px;
+$linkedin-height: 32px;
+$linkedin-total-width: 96px;
+$linkedin-total-height: 96px;
+$linkedin-image: '../images/spritesheet.png';
+$linkedin: (0px, 64px, 0px, -64px, 32px, 32px, 96px, 96px, '../images/spritesheet.png', 'linkedin');
+$rss-name: 'rss';
+$rss-x: 64px;
+$rss-y: 64px;
+$rss-offset-x: -64px;
+$rss-offset-y: -64px;
+$rss-width: 24px;
+$rss-height: 24px;
+$rss-total-width: 96px;
+$rss-total-height: 96px;
+$rss-image: '../images/spritesheet.png';
+$rss: (64px, 64px, -64px, -64px, 24px, 24px, 96px, 96px, '../images/spritesheet.png', 'rss');
+$twitter-name: 'twitter';
+$twitter-x: 32px;
+$twitter-y: 64px;
+$twitter-offset-x: -32px;
+$twitter-offset-y: -64px;
+$twitter-width: 32px;
+$twitter-height: 32px;
+$twitter-total-width: 96px;
+$twitter-total-height: 96px;
+$twitter-image: '../images/spritesheet.png';
+$twitter: (32px, 64px, -32px, -64px, 32px, 32px, 96px, 96px, '../images/spritesheet.png', 'twitter');
+$spritesheet-width: 96px;
+$spritesheet-height: 96px;
+$spritesheet-image: '../images/spritesheet.png';
+$spritesheet-sprites: ($delicious, $drupal, $flickr, $github, $google-plus, $lastfm, $linkedin, $rss, $twitter);
+$spritesheet: (96px, 96px, '../images/spritesheet.png', $spritesheet-sprites);
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

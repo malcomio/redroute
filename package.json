@@ -1,0 +1,16 @@
+{
+  "name": "redroute",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-analyze-css": "^1.0.0",
+    "grunt-autoprefixer": "^2.1.0",
+    "grunt-contrib-compass": "^1.0.1",
+    "grunt-contrib-imagemin": "^0.9.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-newer": "^0.8.0",
+    "grunt-scss-lint": "^0.3.4",
+    "grunt-spritesmith": "^4.7.1",
+    "load-grunt-tasks": "^2.0.0"
+  }
+}
