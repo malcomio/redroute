@@ -1,5 +1,6 @@
 # ignore compiled CSS files
 css/**
+node_modules/**
 
 # ignore the sass cache directory
 .sass-cache/**
