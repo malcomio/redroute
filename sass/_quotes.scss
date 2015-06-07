@@ -1,0 +1,6 @@
+.block-views-block-random-quote-block-1 {
+  .block-title,
+  .node__title {
+    @extend %element-invisible;
+  }
+}
