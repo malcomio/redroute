@@ -50,7 +50,7 @@ module.exports = function(grunt) {
     watch: {
       css: {
         files: 'sass/**/*.scss',
-        tasks: ['compass', 'newer:imagemin', 'newer:autoprefixer'],
+        tasks: ['sass', 'newer:autoprefixer'],
         options : {
 
         }
@@ -78,10 +78,20 @@ module.exports = function(grunt) {
           // custom thresholds values
         }
       }
+    },
+    sass: {
+      options: {
+        sourceMap: true
+      },
+      dist: {
+        files: {
+          'css/redroute.css': 'sass/redroute.scss'
+        }
+      }
     }
   });
 
   require('load-grunt-tasks')(grunt);
 
-  grunt.registerTask('default',['compass', 'newer:imagemin', 'newer:autoprefixer']);
+  grunt.registerTask('default',['sass', 'newer:autoprefixer']);
 }
