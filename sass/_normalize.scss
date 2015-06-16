@@ -43,10 +43,6 @@ audio,
 canvas,
 video {
   display: inline-block;
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    *display: inline;
-    *zoom: 1;
-  }
 }
 
 /**
@@ -112,16 +108,6 @@ html {
   font-size: 100% * ($base-font-size / 16px); /* 3 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-  /* Address `font-family` inconsistency between `textarea` and other form elements. */
-  button,
-  input,
-  select,
-  textarea {
-    font-family: $base-font-family;
-  }
 }
 
 /* Remove default margin. */
@@ -227,15 +213,6 @@ ul {
   padding: 0 0 0 $indent-amount; /* LTR */
 }
 
-@if $legacy-support-for-ie7 {
-  /* Correct list images handled incorrectly in IE 7. */
-  nav ul,
-  nav ol {
-    list-style: none;
-    list-style-image: none;
-  }
-}
-
 /**
  * Embedded content and figures
  *
@@ -244,10 +221,6 @@ ul {
 img {
   /* Remove border when inside `a` element in IE 8/9. */
   border: 0;
-  @if $legacy-support-for-ie7 {
-    /* Improve image quality when scaled in IE 7. */
-    -ms-interpolation-mode: bicubic;
-  }
 
   /* Suppress the space beneath the baseline */
   /* vertical-align: bottom; */
@@ -255,10 +228,6 @@ img {
   /* Responsive images */
   max-width: 100%;
   height: auto;
-  @if $legacy-support-for-ie8 {
-    /* Correct IE 8 not scaling image height when resized. */
-    width: auto;
-  }
 }
 
 /* Correct overflow displayed oddly in IE 9. */
@@ -274,13 +243,6 @@ figure {
 /**
  * Forms
  */
-
-@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-  /* Correct margin displayed oddly in IE 6/7. */
-  form {
-    margin: 0;
-  }
-}
 
 /* Define consistent border, margin, and padding. */
 fieldset {
@@ -351,9 +313,6 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button; /* 2 */
   cursor: pointer; /* 3 */
-  @if $legacy-support-for-ie7 {
-    *overflow: visible; /* 4 */
-  }
 }
 
 /**
