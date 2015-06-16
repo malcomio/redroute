@@ -50,7 +50,7 @@ module.exports = function(grunt) {
     watch: {
       css: {
         files: 'sass/**/*.scss',
-        tasks: ['sass', 'newer:autoprefixer'],
+        tasks: ['default'],
         options : {
 
         }
@@ -93,5 +93,5 @@ module.exports = function(grunt) {
 
   require('load-grunt-tasks')(grunt);
 
-  grunt.registerTask('default',['sass', 'newer:autoprefixer']);
+  grunt.registerTask('default',['sprite', 'sass', 'newer:autoprefixer']);
 }
