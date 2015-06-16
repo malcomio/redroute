@@ -3,9 +3,22 @@
     @extend %element-invisible;
   }
 
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: flex-end;
+
+    margin: 0 0 0.5em;
+  }
+
   .menu-item {
     @extend %hide-text;
-    display: inline-block;
-    margin-right: 0.5em;
+
+    margin: 0 0.5em 0.5em 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
