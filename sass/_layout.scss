@@ -4,12 +4,13 @@ body {
 
 .header {
   @extend %clearfix;
+
+  padding: 1em;
 }
 
 .logo {
   display: block;
   float: left;
-  margin: 1em;
 }
 
 .region-header {
