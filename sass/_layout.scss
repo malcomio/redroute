@@ -1,5 +1,12 @@
-body {
+html {
   background: $black;
+
+  @include breakpoint(laptop) {
+    border-left: 1em double $red;
+    border-right: 1em double $red;
+    margin: 0 0.5em;
+    min-height: 100vh;
+  }
 }
 
 .header {
